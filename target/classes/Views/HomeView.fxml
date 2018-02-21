@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="883.0" prefWidth="1542.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.MainController">
+   <children>
+      <Button layoutX="14.0" layoutY="21.0" mnemonicParsing="false" onAction="#parseACsvFile" text="Try Me" />
+      <LineChart fx:id="moneyChart" layoutX="24.0" layoutY="55.0" prefHeight="791.0" prefWidth="1489.0">
+        <xAxis>
+          <CategoryAxis side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis side="LEFT" />
+        </yAxis>
+      </LineChart>
+      <ComboBox fx:id="fromComboBox" disable="true" layoutX="175.0" layoutY="21.0" onAction="#fromSelected" prefWidth="150.0" />
+      <ComboBox fx:id="untilComboBox" disable="true" layoutX="448.0" layoutY="21.0" onAction="#untilSelected" prefWidth="150.0" />
+      <Text layoutX="134.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="From" />
+      <Text layoutX="404.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Until" />
+      <RadioButton fx:id="outgoingRadio" layoutX="771.0" layoutY="25.0" mnemonicParsing="false" onAction="#outgoingRadioClicked" text="Outgoing" />
+      <RadioButton fx:id="incomingRadio" layoutX="876.0" layoutY="25.0" mnemonicParsing="false" onAction="#incomingRadioClicked" text="Incoming" />
+      <RadioButton fx:id="allRadio" layoutX="699.0" layoutY="25.0" mnemonicParsing="false" onAction="#allRadioClicked" text="All" />
+   </children>
+</AnchorPane>
